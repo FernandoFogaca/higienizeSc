@@ -1,4 +1,16 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const carrossel = document.querySelector(".testimonials-grid");
+if (carrossel) {
+  setInterval(() => {
+    carrossel.scrollBy({ left: 340, behavior: "smooth" });
 
-// Write your JavaScript code.
+    if (
+      carrossel.scrollLeft + carrossel.clientWidth >=
+      carrossel.scrollWidth - 10
+    ) {
+      carrossel.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }, 4000);
+}

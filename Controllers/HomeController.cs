@@ -15,7 +15,41 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var testimonials = new List<Testimonial>
+        {
+            new Testimonial
+            {
+                Id = 1,
+                Name = "Ana Paula",
+                City = "São José",
+                Message = "Meu sofá ficou com outra aparência. Atendimento pontual, cuidadoso e o resultado superou o que eu esperava. ",
+                 Rating = 5,
+                 IsApproved = true,
+
+            },new Testimonial
+        {
+            Id = 2,
+            Name = "Mariana Souza",
+            City = "Florianópolis",
+            Message = "Atendimento excelente e muito capricho.",
+            Rating = 5,
+            IsApproved = true
+        },
+        new Testimonial
+        {
+            Id = 3,
+            Name = "Carla Mendes",
+            City = "Palhoça",
+            Message = "Resultado visível no mesmo dia.",
+            Rating = 5,
+            IsApproved = true
+        }
+
+
+
+        };
+
+        return View(testimonials);
     }
 
     public IActionResult Privacy()

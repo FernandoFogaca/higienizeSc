@@ -1,7 +1,10 @@
-﻿<section class="hero">
+﻿@model List<HigienizeMVC.Models.Testimonial>
+
+<section class="hero">
     <h1 class="hero-title">Higienize SC</h1>
     <p class="hero-text">Higienização de estofados em toda Grande Florianópolis.</p>
     <a href="https://wa.me/5548991101206" target="_blank">
+   
         <button class="hero-button">
             Solicitar orçamento
         </button>
@@ -25,8 +28,8 @@
     </div>
 </section>
 <section class="services">
-    <h2 class="section-title"></h2>
-    <p class="section-subtitle"></p>
+    <h2 class="section-title">Nossos Serviços</h2>
+    <p class="section-subtitle">Soluções completas em higienização de estofados para sua casa</p>
     <div class="services-grid">
         <div class="service-card">
             <h3>Higienização de sofás </h3>
@@ -47,13 +50,63 @@
             </div>
             <div class="service-card">
                 <h3>Higienização de tapetes</h3>
-                <p>Remoção de poeira, odores e impurezas que ficam acumuladas no dia a dia, deixando o ambiente mais limpo e saudável.</p>
+                <p>Remoção de poeira, odores e impurezas que ficam acumuladas no dia a dia, deixando o ambiente mais limpo e
+                    saudável.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Impermeabilização</h3>
+                    <p>Proteção contra líquidos e sujeiras, prolongando a vida útil do seu estofado e facilitando a manutenção.
+                    </p>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Impermeabilização</h3>
-                <p>Proteção contra líquidos e sujeiras, prolongando a vida útil do seu estofado e facilitando a manutenção.</p>
+        </section>
+        <section class="testimonials">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <p class="section-subtitle">Depoimentos de quem já confiou na Higienize SC</p>
+            <div class="testimonials-grid">
+
+                @foreach (var testimonial in Model)
+                {
+                    <div class="testimonial-card">
+
+                        <h3>@testimonial.Name — @testimonial.City</h3>
+                        <div class="testimonial-stars">
+
+                            @for (int i = 0; i < testimonial.Rating; i++)
+                            {
+                                <span>★</span>
+                            }
+                        </div>
+
+                        <p>@testimonial.Message</p>
+
+                    </div>
+                }
+
             </div>
         </div>
 
 
-    </section>
+    
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
