@@ -28,3 +28,4 @@
 /Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/obj/Debug/net8.0/HigienizeMVC.pdb
 /Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/obj/Debug/net8.0/HigienizeMVC.genruntimeconfig.cache
 /Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/obj/Debug/net8.0/ref/HigienizeMVC.dll
+/Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/obj/Debug/net8.0/HigienizeMVC.sourcelink.json

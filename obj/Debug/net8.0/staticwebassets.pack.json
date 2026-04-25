@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/wwwroot/img/after.png",
+      "PackagePath": "staticwebassets/img/after.png"
+    },
+    {
+      "Id": "/Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/wwwroot/img/before.png",
+      "PackagePath": "staticwebassets/img/before.png"
+    },
+    {
       "Id": "/Users/fernandofogaca/Documents/Projetos/HigienizeSC/HigienizeMVC/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
