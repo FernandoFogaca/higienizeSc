@@ -1,112 +1,194 @@
 ﻿@model List<HigienizeMVC.Models.Testimonial>
 
-<section class="hero">
-    <h1 class="hero-title">Higienize SC</h1>
-    <p class="hero-text">Higienização de estofados em toda Grande Florianópolis.</p>
-    <a href="https://wa.me/5548991101206" target="_blank">
-   
-        <button class="hero-button">
-            Solicitar orçamento
-        </button>
-    </a>
-</section>
-<section class="before-after">
-    <h2 class="section-title">
-        Veja nossos resultados
-    </h2>
-    <p class="section-subtitle">
-        Confira a diferença real após a higienização
-    </p>
-    <div class="before-after-container">
+<section class="hero" id="home">
 
-        <div class="before-after-item">
-            <img src="/img/before.png" alt="Antes">
-            <img src="/img/after.png" alt="Depois">
-            
+    <img src="/img/logo.png" class="hero-logo">
+
+    <span class="hero-badge">Higienização profissional de estofados</span>
+
+    <h1 class="hero-title">
+        Ambientes mais limpos, saudáveis e bem cuidados
+    </h1>
+
+    <p class="hero-text">
+        Higienização e impermeabilização de estofados em toda Grande Florianópolis...
+    </p>
+
+    <a href="https://wa.me/5548991101206" target="_blank">
+        <button class="hero-button">Solicitar orçamento</button>
+    </a>
+
+</section>
+
+<section class="gallery" id="gallery">
+    <h2 class="section-title">Galeria</h2>
+    <p class="section-subtitle">
+        Resultados reais, vídeos de aplicação e transformações em estofados
+    </p>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="/img/afterbefore.jpeg" alt="Antes da higienização">
         </div>
 
+         <div class="gallery-item">
+            <video controls muted playsinline>
+                <source src="/img/chair.MOV" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="gallery-item">
+            <video controls muted playsinline>
+                <source src="/img/wine.MP4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="gallery-item">
+            <video controls muted playsinline>
+                <source src="/img/sofa.MP4" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-item">
+            <video controls muted playsinline>
+                <source src="/img/water.MOV" type="video/mp4">
+            </video>
+        </div>
+        <div class="gallery-item">
+            <video controls muted playsinline>
+                <source src="/img/food.MOV" type="video/mp4">
+            </video>
+        </div>
     </div>
 </section>
-<section class="services">
+
+<section class="services" id="services">
     <h2 class="section-title">Nossos Serviços</h2>
     <p class="section-subtitle">Soluções completas em higienização de estofados para sua casa</p>
+
     <div class="services-grid">
         <div class="service-card">
-            <h3>Higienização de sofás </h3>
-            <p>Limpeza profunda que remove sujeiras invisíveis, ácaros e odores, deixando seu sofá renovado e com
-                aparência de novo.</p>
-            </div>
-            <div class="service-card">
-                <h3>Higienização de colchões</h3>
-                <p>Higienização completa que elimina bactérias e ácaros, ajudando a melhorar a qualidade do seu sono.</p>
-            </div>
-            <div class="service-card">
-                <h3>Higienização de cadeiras</h3>
-                <p>Ideal para o dia a dia, removendo manchas e sujeiras acumuladas sem danificar o tecido.</p>
-            </div>
-            <div class="service-card">
-                <h3>Higienização de poltronas</h3>
-                <p>Cuide da sua poltrona preferida com uma limpeza que preserva o tecido e devolve o conforto original.</p>
-            </div>
-            <div class="service-card">
-                <h3>Higienização de tapetes</h3>
-                <p>Remoção de poeira, odores e impurezas que ficam acumuladas no dia a dia, deixando o ambiente mais limpo e
-                    saudável.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Impermeabilização</h3>
-                    <p>Proteção contra líquidos e sujeiras, prolongando a vida útil do seu estofado e facilitando a manutenção.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="testimonials">
-            <h2 class="section-title">O que nossos clientes dizem</h2>
-            <p class="section-subtitle">Depoimentos de quem já confiou na Higienize SC</p>
-            <div class="testimonials-grid">
-
-                @foreach (var testimonial in Model)
-                {
-                    <div class="testimonial-card">
-
-                        <h3>@testimonial.Name — @testimonial.City</h3>
-                        <div class="testimonial-stars">
-
-                            @for (int i = 0; i < testimonial.Rating; i++)
-                            {
-                                <span>★</span>
-                            }
-                        </div>
-
-                        <p>@testimonial.Message</p>
-
-                    </div>
-                }
-
-            </div>
+            <h3><i class="bi bi-stars"></i> Higienização de sofás</h3>
+            <p>Limpeza profunda que remove sujeiras invisíveis, ácaros e odores, deixando seu sofá renovado e com aparência de novo.</p>
         </div>
 
+        <div class="service-card">
+            <h3><i class="bi bi-moon-stars"></i> Higienização de colchões</h3>
+            <p>Higienização completa que elimina bactérias e ácaros, ajudando a melhorar a qualidade do seu sono.</p>
+        </div>
 
-    
+        <div class="service-card">
+            <h3><i class="bi bi-gem"></i> Higienização de cadeiras</h3>
+            <p>Ideal para o dia a dia, removendo manchas e sujeiras acumuladas sem danificar o tecido.</p>
+        </div>
 
+        <div class="service-card">
+            <h3><i class="bi bi-heart-pulse"></i> Higienização de poltronas</h3>
+            <p>Cuide da sua poltrona preferida com uma limpeza que preserva o tecido e devolve o conforto original.</p>
+        </div>
 
+        <div class="service-card">
+            <h3><i class="bi bi-wind"></i> Higienização de tapetes</h3>
+            <p>Remoção de poeira, odores e impurezas que ficam acumuladas no dia a dia, deixando o ambiente mais limpo e saudável.</p>
+        </div>
 
+        <div class="service-card">
+            <h3><i class="bi bi-droplet-half"></i> Impermeabilização</h3>
+            <p>Proteção contra líquidos e sujeiras, prolongando a vida útil do seu estofado e facilitando a manutenção.</p>
+        </div>
     </div>
+</section>
 
+<section class="about" id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <span class="about-label">Sobre a empresa</span>
 
+            <h2 class="section-title">Sobre a Higienize SC</h2>
 
+            <p class="section-subtitle">
+                Excelência em higienização profissional de estofados.
+            </p>
 
+            <p>
+                A Higienize SC Serviços LTDA é especializada em higienização e impermeabilização profissional de estofados para clientes que valorizam ambientes limpos, saudáveis e bem cuidados.
+            </p>
 
+            <p>
+                Utilizamos técnicas avançadas, equipamentos de alta performance e produtos profissionais para eliminar sujeiras profundas, ácaros e bactérias, preservando a qualidade dos tecidos.
+            </p>
 
+            <p>
+                Nosso compromisso é entregar cuidado, confiança e um padrão elevado de serviço em cada atendimento.
+            </p>
+        </div>
 
+        <div class="about-video">
+            <video controls muted playsinline>
+                <source src="/img/about.MP4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
 
+<section class="differentials" id="differentials">
+    <h2 class="section-title">Por que escolher a Higienize SC</h2>
 
+    <p class="section-subtitle">
+        Qualidade, tecnologia e cuidado em cada detalhe
+    </p>
 
+    <div class="differentials-grid">
+        <div class="differential-item">
+            <i class="bi bi-stars"></i>
+            <p><strong>Higienização técnica de alto padrão</strong><br>Limpeza profunda sem danificar o tecido.</p>
+        </div>
 
+        <div class="differential-item">
+            <i class="bi bi-speedometer2"></i>
+            <p><strong>Tecnologia e performance</strong><br>Equipamentos modernos com alta eficiência.</p>
+        </div>
 
+        <div class="differential-item">
+            <i class="bi bi-shield-check"></i>
+            <p><strong>Segurança para família e pets</strong><br>Produtos seguros e controlados.</p>
+        </div>
 
+        <div class="differential-item">
+            <i class="bi bi-droplet"></i>
+            <p><strong>Impermeabilização sofisticada</strong><br>Proteção contra líquidos e sujeiras.</p>
+        </div>
 
+        <div class="differential-item">
+            <i class="bi bi-person-check"></i>
+            <p><strong>Atendimento profissional</strong><br>Pontualidade e cuidado com o ambiente.</p>
+        </div>
 
+        <div class="differential-item">
+            <i class="bi bi-house-heart"></i>
+            <p><strong>Valorização do ambiente</strong><br>Mais conforto, estética e durabilidade.</p>
+        </div>
+    </div>
+</section>
 
+<section class="testimonials" id="testimonials">
+    <h2 class="section-title">O que nossos clientes dizem</h2>
+    <p class="section-subtitle">Depoimentos de quem já confiou na Higienize SC</p>
 
+    <div class="testimonials-grid">
+        @foreach (var testimonial in Model)
+        {
+            <div class="testimonial-card">
+                <h3>@testimonial.Name — @testimonial.City</h3>
+
+                <div class="testimonial-stars">
+                    @for (int i = 0; i < testimonial.Rating; i++)
+                    {
+                        <span>★</span>
+                    }
+                </div>
+
+                <p>@testimonial.Message</p>
+            </div>
+        }
+    </div>
 </section>
