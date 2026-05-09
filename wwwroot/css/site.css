@@ -250,67 +250,169 @@ body {
 
 .services-grid {
   margin-top: 40px;
+
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
   gap: 25px;
+
   max-width: 1000px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.3s;
   position: relative;
+
   overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  transition: 0.4s ease;
+
+  isolation: isolate;
 }
 
 .service-card::before {
   content: "";
+
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 70px;
   height: 4px;
+
   background-color: #f4b400;
+}
+
+.card-blob {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  background: radial-gradient(
+    circle,
+    rgba(77, 184, 255, 0.45) 0%,
+    rgba(13, 110, 253, 0.18) 45%,
+    transparent 75%
+  );
+
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  filter: blur(18px);
+
+  opacity: 1;
+
+  z-index: 1;
+
+  animation: blobMove 8s infinite ease;
+
+  pointer-events: none;
 }
 
 .service-card h3 {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
   color: white;
+
   font-weight: 600;
+
   margin-bottom: 10px;
 }
 
 .service-card h3 i {
   width: 34px;
   height: 34px;
+
   min-width: 34px;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
   color: #003b73;
+
   background-color: #f4b400;
+
   border-radius: 50%;
+
   font-size: 18px;
 }
 
 .service-card p {
   color: rgba(255, 255, 255, 0.85);
+
   line-height: 1.6;
+
   font-size: 15px;
+
   margin: 0;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+
   background: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.25);
 }
 
+@keyframes blobMove {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      translate(0, 0);
+  }
+
+  25% {
+    transform:
+      translate(-50%, -50%)
+      translate(20px, -15px);
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      translate(-15px, 20px);
+  }
+
+  75% {
+    transform:
+      translate(-50%, -50%)
+      translate(15px, 10px);
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      translate(0, 0);
+  }
+}
 /* ABOUT */
 
 .about {
