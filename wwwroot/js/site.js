@@ -1,4 +1,21 @@
-﻿const carrossel = document.querySelector(".testimonials-grid");
+﻿const mobileLinks = document.querySelectorAll('.nav-menu a');
+
+const mobileCheckbox =
+    document.getElementById('label-check');
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        mobileCheckbox.checked = false;
+
+    });
+
+});
+
+
+
+const carrossel = document.querySelector(".testimonials-grid");
 if (carrossel) {
   setInterval(() => {
     carrossel.scrollBy({ left: 340, behavior: "smooth" });
