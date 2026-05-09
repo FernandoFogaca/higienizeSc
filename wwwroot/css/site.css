@@ -5,6 +5,8 @@ html {
 }
 
 body {
+
+   overflow-x: hidden;
   margin-bottom: 60px;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
