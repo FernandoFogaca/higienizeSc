@@ -39,12 +39,229 @@
             @RenderBody()
         </main>
     </div>
+    <section class="faq-section" id="faq">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - HigienizeMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="faq-header">
+
+        <span>Perguntas Frequentes</span>
+
+        <h2>
+            Dúvidas frequentes sobre os nossos serviços
+        </h2>
+
+        <p>
+            Transparência, segurança e informação clara
+            para oferecer uma experiência premium desde
+            o primeiro contacto.
+        </p>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                A higienização remove manchas?
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Reduz significativamente a maioria das manchas.
+                    Casos antigos ou químicos podem não ser totalmente removidos,
+                    sendo sempre avaliados previamente.
+                </p>
+
+            </div>
+
         </div>
-    </footer>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                O estofado fica muito molhado?
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Não. Utilizamos equipamentos profissionais que controlam
+                    a umidade, garantindo uma secagem mais rápida.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Em quanto tempo pode utilizar o estofado?
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    O tempo médio varia entre 4 a 8 horas,
+                    dependendo do tecido e da ventilação do ambiente.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Os produtos são seguros para crianças e pets?
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Sim. Trabalhamos com produtos profissionais seguros,
+                    desenvolvidos para ambientes familiares.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Vale a pena impermeabilizar?
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Sim. A impermeabilização cria uma proteção invisível
+                    contra líquidos e manchas, ajudando a preservar o estofado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <img src="/img/logo.png" alt="Higienize SC Logo">
+
+            <p>
+                Higienização e impermeabilização profissional
+                com alto padrão de qualidade, tecnologia
+                e cuidado com cada detalhe.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://instagram.com/higienize.sc" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/5548991101206" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+                <a href="mailto:higienizesc@gmail.com">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Navegação</h3>
+
+            <a href="#home">Home</a>
+            <a href="#gallery">Galeria</a>
+            <a href="#services">Serviços</a>
+            <a href="#about">Sobre</a>
+            <a href="#faq">FAQ</a>
+
+        </div>
+
+        <div class="footer-services">
+
+            <h3>Serviços</h3>
+
+            <p>Higienização de sofás</p>
+            <p>Higienização de colchões</p>
+            <p>Higienização de cadeiras</p>
+            <p>Impermeabilização</p>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contacto</h3>
+
+            <p>
+                <i class="bi bi-whatsapp"></i>
+                (48) 99110-1206
+            </p>
+
+            <p>
+                <i class="bi bi-envelope-fill"></i>
+                higienizesc@gmail.com
+            </p>
+
+            <p>
+                <i class="bi bi-clock-fill"></i>
+                Seg - Sex: 08:30 às 18:00
+            </p>
+
+            <p>
+                <i class="bi bi-calendar-check-fill"></i>
+                Atendimento agendado
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Higienize SC Serviços LTDA —
+            CNPJ: 48.812.130/0001-55
+        </p>
+
+    </div>
+
+</footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
