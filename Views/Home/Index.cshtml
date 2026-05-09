@@ -249,25 +249,152 @@
     </div>
 </section>
 
-<section class="testimonials" id="testimonials">
-    <h2 class="section-title">O que nossos clientes dizem</h2>
-    <p class="section-subtitle">Depoimentos de quem já confiou na Higienize SC</p>
+<<section class="testimonials" id="testimonials">
+
+    <h2 class="section-title">
+        O que nossos clientes dizem
+    </h2>
+
+    <p class="section-subtitle">
+        Depoimentos de quem já confiou na Higienize SC
+    </p>
 
     <div class="testimonials-grid">
+
         @foreach (var testimonial in Model)
         {
             <div class="testimonial-card">
-                <h3>@testimonial.Name — @testimonial.City</h3>
+
+                <h3>
+                    @testimonial.Name — @testimonial.City
+                </h3>
 
                 <div class="testimonial-stars">
+
                     @for (int i = 0; i < testimonial.Rating; i++)
                     {
                         <span>★</span>
                     }
+
                 </div>
 
                 <p>@testimonial.Message</p>
+
             </div>
         }
+
+        @foreach (var comment in ViewBag.Comments)
+        {
+            <div class="testimonial-card">
+
+                <h3>@comment.Name</h3>
+
+                <div class="testimonial-stars">
+                    ★★★★★
+                </div>
+
+                <p>@comment.Message</p>
+
+            </div>
+        }
+
     </div>
+
 </section>
+<section class="comment-section">
+
+    <div class="comment-box">
+
+        <h2 class="section-title">
+            Deixe seu comentário
+        </h2>
+
+        <p class="section-subtitle">
+            Sua opinião é importante para nós
+        </p>
+
+        <form class="comment-form"
+      method="post"
+      asp-action="AddComment">
+
+            <div class="input-group">
+
+                <i class="bi bi-person"></i>
+
+                <input
+                       type="text"
+                       name="Name"
+                       placeholder="Seu nome"
+                       maxlength="60">
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="bi bi-envelope"></i>
+
+                <input
+                       type="email"
+                       name="Email"
+                       placeholder="Seu e-mail"
+                       maxlength="100">
+
+            </div>
+
+            <div class="rating-group">
+
+                <label>
+                    Avaliação
+                </label>
+
+                <div class="stars">
+
+                    ★ ★ ★ ★ ★
+
+                </div>
+
+            </div>
+
+            <textarea
+                    name="Message"
+                      placeholder="Conte como foi sua experiência..."
+                      maxlength="300"></textarea>
+
+            <div class="comment-info">
+
+                Máximo de 300 caracteres
+
+            </div>
+
+            <button type="submit"
+                    class="comment-button">
+
+                Enviar comentário
+
+            </button>
+
+            <button type="button"
+                    class="google-button">
+
+                <i class="bi bi-google"></i>
+
+                Continuar com Google
+
+            </button>
+
+        </form>
+        <div class="comments-list">
+    
+   
+
+</div>
+
+    </div>
+
+</section>
+
+
+
+
+
+

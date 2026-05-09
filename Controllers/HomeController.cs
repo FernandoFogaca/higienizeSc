@@ -2,10 +2,12 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using HigienizeMVC.Models;
 
+
 namespace HigienizeMVC.Controllers;
 
 public class HomeController : Controller
-{
+
+{private static List<Comment> comments = new();
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -49,8 +51,36 @@ public class HomeController : Controller
 
         };
 
-        return View(testimonials);
+       ViewBag.Comments = comments;
+       return View(testimonials);
     }
+
+   [ HttpPost]
+public IActionResult AddComment(Comment comment)
+
+{comment.Id = comments.Count + 1;
+comments.Add(comment);
+return RedirectToAction("Index");
+}
+
+public IActionResult DeleteComment(int id)
+{
+    var comment = comments.FirstOrDefault(c => c.Id == id);
+
+    if (comment != null)
+    {
+        comments.Remove(comment);
+    }
+
+    return RedirectToAction("Index");
+}
+
+
+
+
+
+
+    
 
     public IActionResult Privacy()
     {
