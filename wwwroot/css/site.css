@@ -2,6 +2,7 @@ html {
   font-size: 14px;
   position: relative;
   min-height: 100%;
+   overflow-x: hidden;
 }
 
 body {
@@ -1078,6 +1079,7 @@ body {
 
 .nav-menu {
   position: fixed;
+   overflow-x: hidden;
 
   top: 0;
   right: -100%;
