@@ -22,16 +22,18 @@
 
 <section class="gallery" id="gallery">
     <h2 class="section-title">Galeria</h2>
+
     <p class="section-subtitle">
         Resultados reais, vídeos de aplicação e transformações em estofados
     </p>
 
     <div class="gallery-grid">
+
         <div class="gallery-item">
             <img src="/img/afterbefore.jpeg" alt="Antes da higienização">
         </div>
 
-         <div class="gallery-item">
+        <div class="gallery-item">
             <video controls muted playsinline>
                 <source src="/img/chair.MOV" type="video/mp4">
             </video>
@@ -48,22 +50,28 @@
                 <source src="/img/sofa.MP4" type="video/mp4">
             </video>
         </div>
+
         <div class="gallery-item">
             <video controls muted playsinline>
                 <source src="/img/water.MOV" type="video/mp4">
             </video>
         </div>
+
         <div class="gallery-item">
             <video controls muted playsinline>
                 <source src="/img/food.MOV" type="video/mp4">
             </video>
         </div>
+
     </div>
+
 </section>
 
 <section class="services" id="services">
 
-    <h2 class="section-title">Nossos Serviços</h2>
+    <h2 class="section-title">
+        Nossos Serviços
+    </h2>
 
     <p class="section-subtitle">
         Soluções completas em higienização de estofados para sua casa
@@ -178,11 +186,18 @@
 </section>
 
 <section class="about" id="about">
-    <div class="about-container">
-        <div class="about-text">
-            <span class="about-label">Sobre a empresa</span>
 
-            <h2 class="section-title">Sobre a Higienize SC</h2>
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <span class="about-label">
+                Sobre a empresa
+            </span>
+
+            <h2 class="section-title">
+                Sobre a Higienize SC
+            </h2>
 
             <p class="section-subtitle">
                 Excelência em higienização profissional de estofados.
@@ -199,57 +214,86 @@
             <p>
                 Nosso compromisso é entregar cuidado, confiança e um padrão elevado de serviço em cada atendimento.
             </p>
+
         </div>
 
         <div class="about-video">
+
             <video controls muted playsinline>
                 <source src="/img/about.MP4" type="video/mp4">
             </video>
+
         </div>
+
     </div>
+
 </section>
 
 <section class="differentials" id="differentials">
-    <h2 class="section-title">Por que escolher a Higienize SC</h2>
+
+    <h2 class="section-title">
+        Por que escolher a Higienize SC
+    </h2>
 
     <p class="section-subtitle">
         Qualidade, tecnologia e cuidado em cada detalhe
     </p>
 
     <div class="differentials-grid">
+
         <div class="differential-item">
             <i class="bi bi-stars"></i>
-            <p><strong>Higienização técnica de alto padrão</strong><br>Limpeza profunda sem danificar o tecido.</p>
+            <p>
+                <strong>Higienização técnica de alto padrão</strong><br>
+                Limpeza profunda sem danificar o tecido.
+            </p>
         </div>
 
         <div class="differential-item">
             <i class="bi bi-speedometer2"></i>
-            <p><strong>Tecnologia e performance</strong><br>Equipamentos modernos com alta eficiência.</p>
+            <p>
+                <strong>Tecnologia e performance</strong><br>
+                Equipamentos modernos com alta eficiência.
+            </p>
         </div>
 
         <div class="differential-item">
             <i class="bi bi-shield-check"></i>
-            <p><strong>Segurança para família e pets</strong><br>Produtos seguros e controlados.</p>
+            <p>
+                <strong>Segurança para família e pets</strong><br>
+                Produtos seguros e controlados.
+            </p>
         </div>
 
         <div class="differential-item">
             <i class="bi bi-droplet"></i>
-            <p><strong>Impermeabilização sofisticada</strong><br>Proteção contra líquidos e sujeiras.</p>
+            <p>
+                <strong>Impermeabilização sofisticada</strong><br>
+                Proteção contra líquidos e sujeiras.
+            </p>
         </div>
 
         <div class="differential-item">
             <i class="bi bi-person-check"></i>
-            <p><strong>Atendimento profissional</strong><br>Pontualidade e cuidado com o ambiente.</p>
+            <p>
+                <strong>Atendimento profissional</strong><br>
+                Pontualidade e cuidado com o ambiente.
+            </p>
         </div>
 
         <div class="differential-item">
             <i class="bi bi-house-heart"></i>
-            <p><strong>Valorização do ambiente</strong><br>Mais conforto, estética e durabilidade.</p>
+            <p>
+                <strong>Valorização do ambiente</strong><br>
+                Mais conforto, estética e durabilidade.
+            </p>
         </div>
+
     </div>
+
 </section>
 
-<<section class="testimonials" id="testimonials">
+<section class="testimonials" id="testimonials">
 
     <h2 class="section-title">
         O que nossos clientes dizem
@@ -287,10 +331,29 @@
         {
             <div class="testimonial-card">
 
-                <h3>@comment.Name</h3>
+                <div class="comment-header">
 
-                <div class="testimonial-stars">
-                    ★★★★★
+                    <div class="comment-avatar">
+
+                        @comment.Name.Substring(0,1)
+
+                    </div>
+
+                    <div class="comment-user">
+
+                        <h3>@comment.Name</h3>
+
+                        <div class="testimonial-stars">
+
+                            @for (int i = 0; i < comment.Rating; i++)
+                            {
+                                <span>★</span>
+                            }
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <p>@comment.Message</p>
@@ -301,6 +364,7 @@
     </div>
 
 </section>
+
 <section class="comment-section">
 
     <div class="comment-box">
@@ -314,18 +378,18 @@
         </p>
 
         <form class="comment-form"
-      method="post"
-      asp-action="AddComment">
+              method="post"
+              asp-action="AddComment">
 
             <div class="input-group">
 
                 <i class="bi bi-person"></i>
 
                 <input
-                       type="text"
-                       name="Name"
-                       placeholder="Seu nome"
-                       maxlength="60">
+                    type="text"
+                    name="Name"
+                    placeholder="Seu nome"
+                    maxlength="60">
 
             </div>
 
@@ -334,10 +398,10 @@
                 <i class="bi bi-envelope"></i>
 
                 <input
-                       type="email"
-                       name="Email"
-                       placeholder="Seu e-mail"
-                       maxlength="100">
+                    type="email"
+                    name="Email"
+                    placeholder="Seu e-mail"
+                    maxlength="100">
 
             </div>
 
@@ -347,18 +411,31 @@
                     Avaliação
                 </label>
 
-                <div class="stars">
+                <div class="stars-input">
 
-                    ★ ★ ★ ★ ★
+                    <input type="radio" name="Rating" value="5" id="star5">
+                    <label for="star5">★</label>
+
+                    <input type="radio" name="Rating" value="4" id="star4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" name="Rating" value="3" id="star3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" name="Rating" value="2" id="star2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" name="Rating" value="1" id="star1">
+                    <label for="star1">★</label>
 
                 </div>
 
             </div>
 
             <textarea
-                    name="Message"
-                      placeholder="Conte como foi sua experiência..."
-                      maxlength="300"></textarea>
+                name="Message"
+                placeholder="Conte como foi sua experiência..."
+                maxlength="300"></textarea>
 
             <div class="comment-info">
 
@@ -383,18 +460,11 @@
             </button>
 
         </form>
-        <div class="comments-list">
-    
-   
 
-</div>
+        <div class="comments-list">
+
+        </div>
 
     </div>
 
 </section>
-
-
-
-
-
-
