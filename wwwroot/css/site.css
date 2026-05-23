@@ -99,8 +99,9 @@ body {
 /* HEADER */
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   padding: 12px 40px;
   display: flex;
@@ -108,6 +109,8 @@ body {
   justify-content: space-between;
   background-color: rgba(0, 59, 115, 0.96);
   backdrop-filter: blur(8px);
+  box-sizing: border-box;
+   width: 100%;
 }
 
 .logo-box {
@@ -1057,6 +1060,46 @@ body {
 
   color: #ea4335;
 }
+
+
+.floating-whatsapp {
+  position: fixed;
+
+  right: 18px;
+  bottom: 18px;
+
+  width: 64px;
+  height: 64px;
+
+  background: #25d366;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 34px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(37, 211, 102, 0.4);
+
+  z-index: 2000;
+
+  transition: 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+
+  background: #1ebe5d;
+}
+
 
 
 /* RESPONSIVO */
