@@ -377,6 +377,15 @@
             Sua opinião é importante para nós
         </p>
 
+        @if (TempData["Success"] != null)
+{
+    <div class="success-message">
+
+        @TempData["Success"]
+
+    </div>
+}
+
         <form class="comment-form"
               method="post"
               asp-action="AddComment">

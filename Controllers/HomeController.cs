@@ -60,6 +60,7 @@ public IActionResult AddComment(Comment comment)
 
 {comment.Id = comments.Count + 1;
 comments.Add(comment);
+TempData["Success"] = "Comentário enviado com sucesso!";
 return RedirectToAction("Index");
 }
 
