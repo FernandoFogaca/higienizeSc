@@ -306,8 +306,18 @@
     <div class="testimonials-grid">
 
         @foreach (var testimonial in Model)
-        {
-            <div class="testimonial-card">
+{
+    <div class="testimonial-card">
+
+        <div class="comment-header">
+
+            <div class="comment-avatar">
+
+                @testimonial.Name.Substring(0,1)
+
+            </div>
+
+            <div class="comment-user">
 
                 <h3>
                     @testimonial.Name — @testimonial.City
@@ -322,11 +332,14 @@
 
                 </div>
 
-                <p>@testimonial.Message</p>
-
             </div>
-        }
 
+        </div>
+
+        <p>@testimonial.Message</p>
+
+    </div>
+}
         @foreach (var comment in ViewBag.Comments)
         {
             <div class="testimonial-card">
@@ -402,6 +415,18 @@
                     required>
 
             </div>
+            <div class="input-group">
+
+    <i class="bi bi-geo-alt"></i>
+
+    <input
+        type="text"
+        name="City"
+        placeholder="Sua cidade"
+        maxlength="60"
+        required>
+
+</div>
 
             <div class="input-group">
 
@@ -460,14 +485,7 @@
 
             </button>
 
-            <button type="button"
-                    class="google-button">
-
-                <i class="bi bi-google"></i>
-
-                Continuar com Google
-
-            </button>
+           
 
         </form>
 

@@ -6,6 +6,7 @@ public class Comment
     {
         
         public required string Name { get; set; }
+        public string City { get; set; }
         public required string Email {get; set;}
         public required string Message {get; set;}
          public int Rating {get;set;}
