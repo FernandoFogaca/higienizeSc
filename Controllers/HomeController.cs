@@ -55,14 +55,18 @@ public class HomeController : Controller
             }
         };
 
-        ViewBag.Comments = _context.Comments.ToList();
-
+        ViewBag.Comments =
+    _context.Comments
+    .Where(c => c.IsApprove)
+    .ToList();
         return View(testimonials);
     }
 
     [HttpPost]
     public IActionResult AddComment(Comment comment)
     {
+         comment.IsApprove = false;
+         comment.CreatedAt = DateTime.Now;
         _context.Comments.Add(comment);
 
         _context.SaveChanges();

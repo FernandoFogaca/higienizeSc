@@ -316,3 +316,27 @@
 
   border: 1px solid #86efac;
 }
+
+.reviews-summary {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.reviews-stars {
+  font-size: 32px;
+
+  color: #f4b400;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 8px;
+}
+
+.reviews-summary p {
+  color: #555;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
