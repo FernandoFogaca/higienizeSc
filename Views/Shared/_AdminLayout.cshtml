@@ -1,12 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Painel Administrativo</title>
 </head>
-<body>
+<body style="
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;">
 
-    @RenderBody()
+    <div style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        text-align:center;
+        box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+
+        <h2 style="margin:0;">
+            🛡️ Painel Administrativo - Higienize SC
+        </h2>
+
+        <p style="margin-top:10px;">
+            📅 @DateTime.Now.ToString("dd/MM/yyyy")
+        </p>
+
+        <div id="clock"
+             style="
+             font-size:18px;
+             font-weight:bold;
+             margin-bottom:15px;">
+        </div>
+
+        <a href="/"
+   style="
+   display:inline-block;
+   background:#2563eb;
+   color:white;
+   text-decoration:none;
+   padding:10px 20px;
+   border-radius:8px;
+   margin:5px;">
+    🏠 Ver Site
+</a>
+
+<a href="/Admin"
+   style="
+   display:inline-block;
+   background:#16a34a;
+   color:white;
+   text-decoration:none;
+   padding:10px 20px;
+   border-radius:8px;
+   margin:5px;">
+    💬 Comentários
+</a>
+
+<a href="/Admin/Gallery"
+   style="
+   display:inline-block;
+   background:#9333ea;
+   color:white;
+   text-decoration:none;
+   padding:10px 20px;
+   border-radius:8px;
+   margin:5px;">
+    🖼️ Galeria
+</a>
+<a href="/Admin/Logout"
+   style="
+   display:inline-block;
+   background:#dc2626;
+   color:white;
+   text-decoration:none;
+   padding:10px 20px;
+   border-radius:8px;
+   margin:5px;">
+    🚪 Sair
+</a>
+    </div>
+
+    <div style="
+        padding:20px;
+        max-width:1200px;
+        margin:auto;">
+
+        @RenderBody()
+
+    </div>
+
+    <script>
+        function updateClock() {
+            document.getElementById("clock").innerHTML =
+                "🕒 " + new Date().toLocaleTimeString();
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+    </script>
 
 </body>
 </html>
