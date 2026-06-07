@@ -17,7 +17,7 @@ public class AdminController : Controller
         var comments = _context.Comments
         .Where(c => !c.IsApprove)
         .ToList();
-
+        ViewBag.PendingCount = comments.Count;
         return View(comments);
     }
 public IActionResult ApproveComment(int id)

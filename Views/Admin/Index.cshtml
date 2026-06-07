@@ -1,10 +1,28 @@
+@{
+    Layout = "_AdminLayout";
+}
+
 @model List<HigienizeMVC.Models.Comment>
 
 <h1>Painel Administrativo</h1>
 
-<h2>Comentários</h2>
+<div style="background:#fff3cd;
+            border:1px solid #ffe69c;
+            padding:15px;
+            margin-bottom:20px;
+            border-radius:8px;">
 
-<table border="1">
+    <h3>🔔 Comentários Pendentes: @ViewBag.PendingCount</h3>
+
+    @if (ViewBag.PendingCount == 0)
+    {
+        <p>Nenhum comentário aguardando aprovação.</p>
+    }
+</div>
+
+<h2>Comentários Pendentes</h2>
+
+<table border="1" cellpadding="10">
     <tr>
         <th>Nome</th>
         <th>Cidade</th>
@@ -22,24 +40,23 @@
             <td>@comment.City</td>
             <td>@comment.Email</td>
             <td>@comment.Message</td>
-            <td>@comment.CreatedAt</td>
+            <td>@comment.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
 
             <td>
                 @(comment.IsApprove ? "Aprovado" : "Pendente")
             </td>
+
             <td>
-    <td>
-    <a href="/Admin/ApproveComment/@comment.Id">
-        Aprovar
-    </a>
+                <a href="/Admin/ApproveComment/@comment.Id">
+                    Aprovar
+                </a>
 
-    |
+                |
 
-    <a href="/Admin/DeleteComment/@comment.Id">
-        Negar
-    </a>
-</td>
-</td>
+                <a href="/Admin/DeleteComment/@comment.Id">
+                    Excluir
+                </a>
+            </td>
         </tr>
     }
 </table>
